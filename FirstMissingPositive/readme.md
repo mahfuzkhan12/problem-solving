@@ -21,3 +21,6 @@ Example 3:
 Input: nums = [7,8,9,11,12]
 Output: 1
 Explanation: The smallest positive integer 1 is missing.
+
+
+problem link: https://leetcode.com/problems/first-missing-positive/
