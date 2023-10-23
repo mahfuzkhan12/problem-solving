@@ -8,8 +8,7 @@ var countKDifference = function(nums, k) {
     var count = 0;
 
     for(var i = 0; i < nums.length; i++){
-        for(var j = i; j < nums.length; j++){
-            console.log(nums[j] - nums[i])
+        for(var j = i+1; j < nums.length; j++){
             if(Math.abs(nums[j] - nums[i] ) == k){
                 count++
             }
