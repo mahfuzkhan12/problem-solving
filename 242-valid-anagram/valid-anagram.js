@@ -27,9 +27,7 @@ var isAnagram = function(s, t) {
     
 
     for(const c in obj_s){
-        if(obj_t.hasOwnProperty(c) && obj_t[c] == obj_s[c]){
-            delete obj_t[c]
-        }else {
+        if(!obj_t.hasOwnProperty(c) || obj_t[c] != obj_s[c]){
             return false
         }
     }
