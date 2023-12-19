@@ -14,23 +14,23 @@ var removeElements = function(head, val) {
     if(!head || !head.val){
         return head
     }
-
-
-    var previous = head
+    
+    var previous = null
     var current = head
 
     while(current) {
         if(current.val == val){
-            previous.next = current.next
+            if(!previous){
+                head = head.next
+            }else {
+                previous.next = current.next
+            }
         }else {
             previous = current
         }
         current = current.next
     }
 
-    if(head.val == val){
-        head = head.next
-    }
     return head
 
 };
