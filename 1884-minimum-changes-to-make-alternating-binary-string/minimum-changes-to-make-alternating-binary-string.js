@@ -12,16 +12,12 @@ var minOperations = function(s) {
     for(let i = 1; i < s.length; i++){
         if(prev == s[i]){
             count++
+            prev_l = s[i]
             prev = s[i] == "0" ? "1" : "0"
         }else {
-            prev = s[i]
-        }
-        
-        if(prev_l == s[i]){
             count_l++
             prev_l = s[i] == "0" ? "1" : "0"
-        }else {
-            prev_l = s[i]
+            prev = s[i]
         }
     }
 
