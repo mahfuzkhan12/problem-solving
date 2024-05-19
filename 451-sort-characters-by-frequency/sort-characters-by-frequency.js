@@ -5,24 +5,26 @@
 var frequencySort = function(s) {
     
     const obj = {}
+    const keys = []
+
 
     for(const c of s){
-        if(obj[c]) {
+        if(obj[c]){
             obj[c] += c
         }else {
+            keys.push(c)
             obj[c] = c
         }
     }
 
-    const entries = Object.entries(obj);
-    entries.sort((a, b) => b[1].length - a[1].length);
-    const sortedKeys = entries.map(([key, value]) => key);
+    keys.sort((a, b) => obj[b].length - obj[a].length);
 
-    let ans = ""
-    for(let i = 0; i < sortedKeys.length; i++){
-        ans += obj[sortedKeys[i]]
+    let res = ""
+    for(let i = 0; i < keys.length; i++){
+        res += obj[keys[i]]
     }
 
-    return ans
+    return res
+
 
 };
