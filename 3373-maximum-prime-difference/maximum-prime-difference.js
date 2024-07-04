@@ -23,7 +23,6 @@ var maximumPrimeDifference = function(nums) {
     for(let i = 0; i < nums.length; i++){
 
         if(isPrime(nums[i])){
-            console.log(nums[i], i)
             if(firstIndex === false){
                 firstIndex = i
             }
