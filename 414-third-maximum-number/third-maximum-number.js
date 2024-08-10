@@ -26,7 +26,6 @@ var thirdMax = function(nums) {
         }
     }
 
-    console.log(obj)
     if(obj[3] !== null){
         return obj[3]
     }
