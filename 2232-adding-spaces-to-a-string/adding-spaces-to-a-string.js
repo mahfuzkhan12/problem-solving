@@ -9,12 +9,10 @@ var addSpaces = function(s, spaces) {
     let space_idx = 0
     for(let i = 0; i < s.length; i++){
         if(i === spaces[space_idx]){
-            const char = s[i] ? s[i] : ""
-            res += " "+char
+            res += " "
             space_idx++
-        }else {
-            res += s[i]
         }
+        res += s[i]
     }
 
     return res
